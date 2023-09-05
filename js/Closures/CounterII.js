@@ -8,3 +8,20 @@ decrement() reduces the current value by 1 and then returns it.
 reset() sets the current value to init and then returns it.
 */
 
+function createCounter(init) {
+    let current = init;
+    let initial = current;
+    return {
+        increment: function () {
+            return ++current;
+            },
+        decrement: function () {
+            return --current;
+            },
+        reset: function () {
+            current = initial;
+            return current;
+        }
+        
+    }
+}
